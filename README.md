@@ -1,6 +1,18 @@
 # ClimateFrame
+ClimateFrame is a framework that allows you to frame data by defining specific actions that are executed when certain events occur within real time data.
 
-ClimateFrame is a framework that allows you to frame data. 
+
+Mission Statement/ Goal:
+Providing a framework that allows regional experts to communicate their knowledge with local communities.
+
+
+What a mission statement is:
+A concise summary of the aims of a project.
+
+The problem we are trying to solve:
+* 
+*
+*
 
 The concrete use case is as follows: 
 * A local expert wants to help vulnerable clients 
