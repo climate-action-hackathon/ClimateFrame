@@ -14,10 +14,12 @@ A concise summary of the aims of a project.
 
 The problem we are trying to solve:
 -----------------------------------
+Currently local experts have no framework that helps them and allows them to automatically issue warnings or inform communities based on current data 
+
 * Bridging the gap between fragmented datasets and local communities
 * Combining datasets and knowledge of local experts
 * Providing a common interface for building a message system based on customized datasets
-* Currently local experts have no framework that helps them and allows them to automatically issue warnings or inform communities based on current data 
+
 
 The concrete use case is as follows: 
 ------------------------------------
