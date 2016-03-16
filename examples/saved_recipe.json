@@ -1,0 +1,39 @@
+// once such a recipe is send from frontend backend is respond with recipe id
+// For example {"recipe_id": "47189023261"}
+
+{
+    "name": "Thunderstorm Warning",
+    // the following filed is going to be added by mongodb after it's saved
+    "_id": "47189023261",
+    "latitude": "-17.9244",
+    "longitude": "25.8567",
+    "triggers": [
+        {
+            "api_id": "pulse",
+            "trigger_id": "thunder_over",
+            "parameters": [
+                {
+                    "percentage": 75
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "sms",
+            "name": "Thunderstorm ASCII Art",
+            "text": "There's going to be a thunderstorm. Beware!",
+            // the following field is going to be created after Twilio's response
+            "registration_number": "+15417543010",
+            "numbers": ["+905301148060"]
+        },
+        {
+            "type": "call",
+            "name": "Thunderstorm Emergency Call",
+            "voice_url": "https://www.ee.columbia.edu/~dpwe/sounds/sents/sf1_fi1.wav",
+            // the following field is going to be created after Twilio's response
+            "registration_number": "+15417543010",
+            "numbers": ["+905301148060"]
+        }
+    ]
+}
