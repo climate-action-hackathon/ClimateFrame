@@ -34,10 +34,8 @@ def add_recipe():
 
 @app.route('/recipe/delete/<int:id>', methods=['DELETE'])
 def delete_entry(id):
-   if database.delete_recipe(id):
-    return jsonify({'status':'OK','deleted':'1'})
-   else:
-    return jsonify({'status':'Not deleted','deleted':'0'})
+   status = database.delete_recipe(id):
+   return jsonify(status)
 
 if __name__ == "__main__":
     app.run(debug=True)
