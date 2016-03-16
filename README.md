@@ -31,12 +31,10 @@ The concrete use case is as follows:
 
 Markers of Success:
 -------------------
-
 * Local experts to feel involved and enthusiastic. 
 * We want governments to see our tool as a chance.
 * We want to be the go to place for content providers who are looking for a platform to share info
 * We want to enable direct stakeholders to share information with communities.
-
 
 Indirect Stakeholders:
 ----------------------
@@ -54,4 +52,9 @@ Direct Stakeholders:
 * news agencies
 * governments
 
+Challenges:
+-----------
 
+* Involving key people share that aim to help communities
+* monetizing or making this sustainable
+* For key people to reach the communities
