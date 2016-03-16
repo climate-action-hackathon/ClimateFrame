@@ -1,11 +1,12 @@
 {
+    "name": "Thunderstorm Warning",
     "triggers": [
         {
             "api_id": "pulse",
-            "trigger_id": "temp_over",
+            "trigger_id": "thunder_over",
             "parameters": [
                 {
-                    "temp": 35
+                    "percentage": 75
                 }
             ]
         }
@@ -14,11 +15,17 @@
         {
             "type": "sms",
             "name": "Thunderstorm ASCII Art",
+            "text": "There's going to be a thunderstorm. Beware!",
+            // the following field is going to be created after Twilio's response
+            "registration_number": "+15417543010",
             "numbers": ["+905301148060"]
         },
         {
             "type": "call",
             "name": "Thunderstorm Emergency Call",
+            "voice_url": "https://www.ee.columbia.edu/~dpwe/sounds/sents/sf1_fi1.wav",
+            // the following field is going to be created after Twilio's response
+            "registration_number": "+15417543010",
             "numbers": ["+905301148060"]
         }
     ]
