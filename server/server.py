@@ -6,6 +6,7 @@ from flask import Flask
 from db import Database
 
 app = Flask(__name__)
+database = Database()
 
 @app.route("/")
 def hello():
@@ -23,11 +24,9 @@ def get_forecast():
 
 @app.route("/contents")
 def get_contents():
-	database = Database()
+    result = database.query()
 
-	result = database.query()
-
-	return str(result)
+    return str(result)
 
 
 
