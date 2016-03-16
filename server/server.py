@@ -3,9 +3,11 @@ import json
 from flask import Flask, jsonify
 from apis import pulse
 from db import Database
+from scheduler import start_scheduled_jobs
 
 app = Flask(__name__)
 database = Database()
+start_scheduled_jobs()
 
 @app.route("/")
 def hello():
