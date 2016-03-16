@@ -8,7 +8,7 @@
     "action": {
         "type": "sms",
         "name": "Thunderstorm ASCII Art",
-        "text": "There's going to be a thunderstorm. Beware!",
+        "text": "There is going to be a thunderstorm. Beware!",
         "registration_number": "+15417543010",
         "numbers": ["+905301148060"]
     }
