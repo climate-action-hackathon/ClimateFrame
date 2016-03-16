@@ -1,6 +1,6 @@
 import requests
 import json
-from flask import Flask
+from flask import Flask, jsonify
 from apis import pulse
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def hello():
 
 @app.route("/forecast")
 def get_forecast():
-    return pulse.get_hourly_6day_forecast()
+    return jsonify({'forecast': pulse.get_hourly_6day_forecast()})
 
 if __name__ == "__main__":
     app.run()
