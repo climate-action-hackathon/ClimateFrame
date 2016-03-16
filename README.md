@@ -27,3 +27,31 @@ The concrete use case is as follows:
 * The local expert uses our framework and selects the datasets he/she wants to use
 * The local expert knows the vulnerable clients and this specifies messages that will be sent as text messages or ASCII art symbols to the vulnerable clients
 * Since the expert knows the local clients he/she gets them to sign up to the service
+
+
+Markers of Success:
+-------------------
+
+* Local experts to feel involved and enthusiastic. 
+* We want governments to see our tool as a chance.
+* We want to be the go to place for content providers who are looking for a platform to share info
+* We want to enable direct stakeholders to share information with communities.
+
+
+Indirect Stakeholders:
+----------------------
+* meterologists
+* media 
+* news agencies
+* data providers
+* vulnerable communities
+
+Direct Stakeholders:
+--------------------
+* key people who want to help communities with data
+* meterologists
+* media 
+* news agencies
+* governments
+
+
