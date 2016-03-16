@@ -1,59 +1,55 @@
 {
-    "p_key":"d484f320c70e43528cd85eae0618c45a",
-    "apis": [
-        {
-            "api_id": "pulse",
+    "keys": {
+        "p_key": "d484f320c70e43528cd85eae0618c45a"
+    },
+    "apis": {
+        "pulse": {
             "name": "Pulse",
-            "triggers": [
-                {
-                    "trigger_id": "temp_over",
+            "triggers": {
+                "temp_over": {
                     "name": "Temperature is over",
-                    "parameters": [
-                        {
-                            "parameter_id": "temp",
+                    "parameters": {
+                        "temp": {
+                            "type": "int",
                             "name": "Temperature",
-                            "unit": "celcius"
+                            "unit": "celcius",
                         }
-                    ]
+                    }
                 },
-                {
-                    "trigger_id": "temp_under",
+                "temp_under": {
                     "name": "Temperature is under",
-                    "parameters": [
-                        {
-                            "parameter_id": "temp",
+                    "parameters": {
+                        "temp": {
+                            "type": "int",
                             "name": "Temperature",
-                            "unit": "celcius"
+                            "unit": "celcius",
                         }
-                    ]
+                    }
                 },
-                {
-                    "trigger_id": "wind_over",
+                "wind_over": {
                     "name": "Wind speed is over",
-                    "parameters": [
-                        {
-                            "parameter_id": "speed",
+                    "parameters": {
+                        "speed": {
+                            "type": "int",
                             "name": "Wind Speed",
-                            "unit": "km/h"
+                            "unit": "km/h",
                         }
-                    ]
+                    }
                 },
-                {
-                    "trigger_id": "thunder_over",
+                "thunder_over": {
                     "name": "Thunderstorm risk is over",
-                    "parameters": [
-                        {
-                            "parameter_id": "percent",
+                    "parameters": {
+                        "percent": {
+                            "type": "int",
                             "name": "Percentage",
-                            "unit": "percentage"
+                            "unit": "percentage",
                         }
-                    ]
+                    }
                 }
-            ]
+            }
         },
-        {
-            "api_id": "aweather",
+        "aweather": {
             "name": "aWeather"
         }
-    ]
+    }
 }
