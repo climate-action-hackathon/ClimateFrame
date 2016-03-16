@@ -2,7 +2,7 @@ import requests
 import json
 
 def get_hourly_6day_forecast():
-    with open('config.json') as config_file:
+    with open('../config.json') as config_file:
         print('get_hourly_6day_forecast()')
         key = json.load(config_file)['p_key']
         forecast_endpoint = 'https://earthnetworks.azure-api.net/getHourly6DayForecast/data/forecasts/v1/hourly'
