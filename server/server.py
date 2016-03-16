@@ -59,7 +59,7 @@ def textmessage():
                                      from_=twilio_phone_number,
                                      body=sms)
     
-    return "hello"
+    return sms
 
 
 @app.route("/text")
@@ -74,7 +74,7 @@ def text():
                                      from_=twilio_phone_number,
                                      body=sms)
     
-    return "hello"
+    return sms
 
 @app.route("/call")
 def call():
