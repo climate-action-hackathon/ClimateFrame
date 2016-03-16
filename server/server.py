@@ -20,7 +20,7 @@ def get_forecast():
 
 @app.route("/recipes")
 def get_recipes():
-    recipes = database.get_recipes()
+    recipes = database.get_all_recipes()
     return jsonify(recipes)
 
 if __name__ == "__main__":
