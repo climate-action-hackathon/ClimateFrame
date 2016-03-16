@@ -19,7 +19,7 @@ class Database():
     def get_cursor_data(self, cursor):
         data = []
         for item in cursor:
-            data.add(item)
+            data.append(item)
         return data
 
     def add_recipe(self, recipe):
@@ -37,6 +37,5 @@ class Database():
         db = self.get_db()
         objectid = ObjectId(id)
         cursor = db.recipes.find({"__id":objectid})
-        # recipes = self.get_cursor_data(cursor)
-        return cursor
-
+        recipes = self.get_cursor_data(cursor)
+        return recipes
