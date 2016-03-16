@@ -42,6 +42,7 @@ slides & prototype
             * If you texted '2':
                 * You will or have received a text message with a symbol
                 ```
+                .
                  ______   _
                __|     | (*)
               |  |     |//""
@@ -54,34 +55,25 @@ slides & prototype
 
                 (crops)
                 ```
-
-            * If you texted '3':
-                * You will or have received a call in the local language (in this case English)
-                * or an ASCII art universal symbol.
-    * Let's think back to Nelisa 
-    * 
-    *
-    * Now please send a text message to: [NUMBER]
-
-
-
-```
-  ______
- |
- |______
- |______ \
-        ) |
-       / /
-
-(o) (o) (o) (o) 
- |   |   |   |
- 
-(bucket of water)
-```
-
-
-
-Life demo with delegates texting the number and us sending some life info to them.
+* This is only one possible use case:
+    * Ideally local experts, governments, etc should be able to use any dataset and define actionable items on those
+        * texts
+        * ASCII art universal symbol
+        * calls
+        * android smartphone app notifications
+        * bi-directional messaging - calling the local experts back 
+* Challenges from the beginning:
+    * Monetization: 
+        * Weather insurance 
+            * example with hail   
+            * allows to make enough money to keep this sustainable while providing a free service for vulnerable communities.
+* Challenges:
+    * Georgraphic data
+    * Involving key people share that aim to help communities
+    * Monetizing or making this sustainable
+    * For key people to reach the communities
+    * Finding a common and easily usable interface
+    * Language barriers
 
 
 #### Notes:
