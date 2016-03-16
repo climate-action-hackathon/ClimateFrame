@@ -28,7 +28,6 @@ The concrete use case is as follows:
 * The local expert knows the vulnerable clients and this specifies messages that will be sent as text messages or ASCII art symbols to the vulnerable clients
 * Since the expert knows the local clients he/she gets them to sign up to the service
 
-
 Markers of Success:
 -------------------
 * Local experts to feel involved and enthusiastic. 
@@ -59,3 +58,32 @@ Challenges:
 * For key people to reach the communities
 * Finding a common and easily usable interface
 * Language barriers
+
+Installation:
+-------------
+
+```
+virtualenv venv
+source venv/bin/activate
+pip install Flask
+```
+
+
+
+
+TODO:
+-----
+
+BACKEND:
+--------
+* Backend: 
+* Everyone else
+* Using Python Flask
+
+Frontend:
+---------
+* Rashiq
+
+
+
+
