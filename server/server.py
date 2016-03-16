@@ -3,6 +3,8 @@ import sys
 import requests
 import json
 from flask import Flask
+from db import Database
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -19,5 +21,15 @@ def get_forecast():
         request_url = forecast_endpoint + parameters + '&location=' + location + '&subscription-key=' + key
         return requests.get(request_url).content
 
+@app.route("/contents")
+def get_contents():
+	database = Database()
+
+	result = database.query()
+
+	return str(result)
+
+
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
