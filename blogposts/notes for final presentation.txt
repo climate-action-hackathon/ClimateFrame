@@ -15,10 +15,11 @@ slides & prototype
             * Lack of a common interface for building a message system based on customized datasets
             * Difficulty to communicate effectively and automaticall issue warnings or inform communities
             * Monetization and Sustainability
-                * Poor Person Pays (PPP) does not work
+                * Poor Person Pays (PPP) does not work - Rachel Cowell
             * Lack of understanding how best to reach vulnerable communities and communicate with them
     * We wanted to address these issues
         * ClimateFrame is a framework that allows you to frame data by defining specific actions that are executed when certain events occur within real time data.
+        * streamline this process
     * How so? Let's go through an example:
         * Consider Nelisa. 
             * Nelisa is a specialist working with local farmers within her community.
@@ -26,7 +27,7 @@ slides & prototype
             * She has identified several ways in which she could help them in their workflow using her knowledge and a dataset.
                 * E.g. She has access to a dataset that gives her information on when the crops of the farmers need to be watered and harvested to maximize output. 
             * However this would require her to be in contact with the farmers almost daily. 
-        * Problem: Nelisa has no way of reaching all farmers easily.    
+        * Problem: Nelisa has no way of reaching all farmers easily.   
 * Live demo:
     * We will now look at a live demo of our platform. For this demonstration, you will assume the role of farmers. Please have your cell phones ready.
     * Back to Nelisa
@@ -40,48 +41,30 @@ slides & prototype
             * If you texted '1':
                 * You will or have received a text message with text
             * If you texted '2':
-                * You will or have received a text message with a symbol
-                ```
-                 ______   _
-               __|     | (*)
-              |  |     |//""
-               \ |      / ""
-                ˜|_____|  ""
-                          ""
-                (o) (o) (o)"(o) 
-                 |   |   |"" |
-                ~~~~~~~~~~~~~~~~ 
-
-                (crops)
-                ```
-
+                * You will or have received a text message with an ASCII art universal symbol
+                * ![Alt text](watering.png "Text message")
             * If you texted '3':
                 * You will or have received a call in the local language (in this case English)
-                * or an ASCII art universal symbol.
-    * Let's think back to Nelisa 
-    * 
-    *
-    * Now please send a text message to: [NUMBER]
+* This is only one possible use case:
+    * Ideally local experts, governments, etc should be able to use any dataset and define actionable items on those
+        * calls
+        * texts
+        * ASCII art universal symbol
+        * android smartphone app notifications
+        * bi-directional messaging - calling the local experts back 
+* Challenges from the beginning:
+    * Monetization: 
+        * Weather insurance 
+            * example with hail   
+            * allows to make enough money to keep this sustainable while providing a free service for vulnerable communities.
+* Challenges:
+    * Georgraphic data
+    * Involving key people share that aim to help communities
+    * Monetizing or making this sustainable
+    * For key people to reach the communities
+    * Finding a common and easily usable interface
+    * Language barriers
 
-
-
-```
-  ______
- |
- |______
- |______ \
-        ) |
-       / /
-
-(o) (o) (o) (o) 
- |   |   |   |
- 
-(bucket of water)
-```
-
-
-
-Life demo with delegates texting the number and us sending some life info to them.
 
 
 #### Notes:
@@ -93,7 +76,6 @@ Airtel
 Gilbert Lungu - mobile company
 
 iShamba - Example
-Poor Person Pays (ppp) doesn't work - Rachel Cowell
 - how do you monetize - commercial 
 google adwords sold
 Edutainment company - huge audiences
@@ -102,8 +84,6 @@ Edutainment company - huge audiences
 - 200 000 sms sign ups - kenya
 
 
-calling the local experts
-
 different zones
 open street maps
 geonames
@@ -111,8 +91,5 @@ geonames
 threshold settings
 
 areas with thresholds
-
-researchgate
-
 working around limitations
 
