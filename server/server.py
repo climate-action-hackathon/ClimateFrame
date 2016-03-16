@@ -18,11 +18,10 @@ def hello():
 def get_forecast():
     return jsonify({'forecast': pulse.get_hourly_6day_forecast()})
 
-@app.route("/contents")
-def get_contents():
-    result = database.query()
-
-    return jsonify(result)
+@app.route("/recipes")
+def get_recipes():
+    recipes = database.get_recipes()
+    return jsonify(recipes)
 
 if __name__ == "__main__":
     app.run(debug=True)
