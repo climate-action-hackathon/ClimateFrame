@@ -8,42 +8,34 @@
             "triggers": {
                 "temp_over": {
                     "name": "Temperature is over",
-                    "parameters": {
-                        "temp": {
-                            "type": "int",
-                            "name": "Temperature",
-                            "unit": "celcius",
-                        }
+                    "parameter": {
+                        "type": "int",
+                        "name": "Temperature",
+                        "unit": "celcius"
                     }
                 },
                 "temp_under": {
                     "name": "Temperature is under",
-                    "parameters": {
-                        "temp": {
-                            "type": "int",
-                            "name": "Temperature",
-                            "unit": "celcius",
-                        }
+                    "parameter": {
+                        "type": "int",
+                        "name": "Temperature",
+                        "unit": "celcius"
                     }
                 },
                 "wind_over": {
                     "name": "Wind speed is over",
-                    "parameters": {
-                        "speed": {
-                            "type": "int",
-                            "name": "Wind Speed",
-                            "unit": "km/h",
-                        }
+                    "parameter": {
+                        "type": "int",
+                        "name": "Wind Speed",
+                        "unit": "km/h"
                     }
                 },
                 "thunder_over": {
                     "name": "Thunderstorm risk is over",
-                    "parameters": {
-                        "percent": {
-                            "type": "int",
-                            "name": "Percentage",
-                            "unit": "percentage",
-                        }
+                    "parameter": {
+                        "type": "int",
+                        "name": "Percentage",
+                        "unit": "percentage"
                     }
                 }
             }
