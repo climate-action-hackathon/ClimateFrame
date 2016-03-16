@@ -25,8 +25,8 @@ The Concrete Use Case is as Follows:
 ------------------------------------
 * A local expert wants to help vulnerable clients 
 * The local expert uses our framework and selects the datasets he/she wants to use
-* The local expert knows the vulnerable clients and this specifies messages that will be sent as text messages or ASCII art symbols to the vulnerable clients
-* Since the expert knows the local clients he/she gets them to sign up to the service
+* The local expert knows the vulnerable clients and this specifies messages that will be sent as text messages or ASCII art symbols to the vulnerable clients when certain events in the realtime data occur
+* Since the expert knows the local clients he/she gets them to sign up to the service 
 
 
 Markers of Success:
@@ -119,3 +119,16 @@ TODO:
 #### Backend:
 * Everyone else
 * Using Python Flask
+
+
+Progress:
+---------
+### Backend
+#### Make Pulse API available
+##### Implement Pulse Forecast Endpoint
+ * [x] Get forecast data
+ * [ ] Create triggers
+ * [ ] Create actions
+ * [ ] Create recipes that consists of triggers and actions
+ * [ ] Save recipes (To a json file or mongodb)
+ * [ ] Run scheduled jobs on the recipes that runs every hour
