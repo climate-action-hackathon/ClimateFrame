@@ -74,6 +74,36 @@ pip install -r requirements.txt
 ```
 
 
+##  Install [mongoDB](http://mongodb.org/)
+
+According to the mongoDB installation instructions for [linux](https://docs.mongodb.org/master/administration/install-on-linux/), [mac](https://docs.mongodb.org/master/tutorial/install-mongodb-on-os-x/) and [window](https://docs.mongodb.org/master/tutorial/install-mongodb-on-windows/).
+
+### Linux (Ubuntu and Debian)
+Import the public key:
+
+```
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+```
+
+Next, for debian:
+
+```
+$ echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+```
+
+Or ubuntu:
+```
+$ echo echo "deb http://repo.mongodb.org/apt/ubuntu precise/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+
+```
+
+Then finally for either system:
+```
+$ sudo apt-get update
+$ sudo apt-get install mongodb-org 
+```
+
+
 Running:
 --------
 ```
