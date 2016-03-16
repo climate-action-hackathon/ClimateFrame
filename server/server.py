@@ -16,7 +16,10 @@ def hello():
 
 @app.route("/forecast")
 def get_forecast():
-    return jsonify({'forecast': pulse.get_hourly_6day_forecast()})
+    latidude = '-17.9244'
+    longitude = '25.8567'
+    forecast = pulse.get_hourly_6day_forecast(latidude, longitude)
+    return jsonify({'forecast': forecast})
 
 @app.route("/recipes")
 def get_recipes():
