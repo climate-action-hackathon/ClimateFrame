@@ -69,14 +69,29 @@ Installation:
 ```
 virtualenv venv
 source venv/bin/activate
-cd server
-pip install -r requirements.txt
+sudo pip install -r server/requirements.txt
 ```
 
 
 ##  Install [mongoDB](http://mongodb.org/)
 
-You can follow mongoDB installation instructions for [linux](https://docs.mongodb.org/master/administration/install-on-linux/), [mac](https://docs.mongodb.org/master/tutorial/install-mongodb-on-os-x/) and [window](https://docs.mongodb.org/master/tutorial/install-mongodb-on-windows/).
+According to the mongoDB installation instructions for [linux](https://docs.mongodb.org/master/administration/install-on-linux/), [mac](https://docs.mongodb.org/master/tutorial/install-mongodb-on-os-x/) and [window](https://docs.mongodb.org/master/tutorial/install-mongodb-on-windows/).
+
+### OS X
+```
+brew install mongodb
+mkdir -p /data/db
+
+```
+
+### Ubuntu
+
+```
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+$ echo echo "deb http://repo.mongodb.org/apt/ubuntu precise/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+$ sudo apt-get update
+$ sudo apt-get install mongodb-org 
+```
 
 
 Running:
