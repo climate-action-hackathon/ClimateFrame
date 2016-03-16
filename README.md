@@ -54,7 +54,8 @@ Direct Stakeholders:
 
 Challenges:
 -----------
-
 * Involving key people share that aim to help communities
 * monetizing or making this sustainable
 * For key people to reach the communities
+* Finding a common and easily usable interface
+* language barriers
