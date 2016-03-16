@@ -45,3 +45,9 @@ class Database():
         cursor = db.recipes.find({"__id":objectid})
         recipes = self.get_cursor_data(cursor)
         return recipes
+
+    def delete_recipe(self, id):
+        db = self.get_db()
+        objectid = ObjectId(id)
+        cursor = db.recipes.deleteOne({"__id":objectid})
+        
