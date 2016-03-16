@@ -24,7 +24,7 @@ def get_forecast():
 @app.route("/recipes")
 def get_recipes():
     recipes = database.get_all_recipes()
-    return jsonify(recipes)
+    return jsonify({'recipes': recipes})
 
 @app.route('/recipe', methods = ['POST'])
 def add_recipe():
