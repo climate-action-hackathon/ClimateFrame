@@ -121,4 +121,4 @@ Progress:
  * [ ] Create actions
  * [ ] Create recipes that consists of triggers and actions
  * [ ] Save recipes (To a json file or mongodb)
- * [ ] Run scheduled jobs on the recipes that runs every hour
+ * [x] Run scheduled jobs on the recipes that runs every hour
