@@ -93,11 +93,12 @@ TODO:
 
 Progress:
 ---------
+### Backend
 #### Make Pulse API available
 ##### Implement Pulse Forecast Endpoint
- [x] Get forecast data
- [ ] Create triggers
- [ ] Create actions
- [ ] Create recipes that consists of triggers and actions
- [ ] Save recipes (To a json file or mongodb)
- [ ] Run scheduled jobs on the recipes that runs every hour
+ * [x] Get forecast data
+ * [ ] Create triggers
+ * [ ] Create actions
+ * [ ] Create recipes that consists of triggers and actions
+ * [ ] Save recipes (To a json file or mongodb)
+ * [ ] Run scheduled jobs on the recipes that runs every hour
