@@ -122,3 +122,4 @@ Progress:
  * [ ] Create recipes that consists of triggers and actions
  * [ ] Save recipes (To a json file or mongodb)
  * [x] Run scheduled jobs on the recipes that runs every hour
+ * [x] Integrate Twilio to be able to send messages
