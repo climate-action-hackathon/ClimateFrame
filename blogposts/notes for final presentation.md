@@ -24,3 +24,16 @@ Edutainment company - huge audiences
 
 
 calling the local experts
+
+different zones
+open street maps
+geonames
+
+threshold settings
+
+areas with thresholds
+
+researchgate
+
+working around limitations
+
