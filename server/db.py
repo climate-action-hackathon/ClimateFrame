@@ -24,7 +24,9 @@ class Database():
 
     def add_recipe(self, recipe):
         db = self.get_db()
-        recipe_id = db.recipes.insert_one(recipe).inserted_id
+        recipe_id = str(ObjectId())
+        recipe['_id'] = recipe_id
+        db.recipes.insert(recipe)
         return recipe_id
 
     def get_all_recipes(self):
@@ -32,6 +34,10 @@ class Database():
         cursor = db.recipes.find()
         recipes = self.get_cursor_data(cursor)
         return recipes
+
+    def remove_all_recipes(self):
+        db = self.get_db()
+        db.recipes.remove()
 
     def get_recipe(self, id):
         db = self.get_db()

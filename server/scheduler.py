@@ -4,11 +4,19 @@ from db import Database
 
 database = Database()
 
+def is_triggering(trigger):
+    return True
+
 def job():
-    print("Running scheduled job...")
     recipes = database.get_all_recipes()
     for recipe in recipes:
-        print recipe
+        print('Controlling recipe id ' + recipe['_id'])
+        trigger = recipe['triggers'][0]
+        action = recipe['actions'][0]
+        if is_triggering(trigger):
+            print('Going to do the following action:')
+            print(action)
+            
 
 def start_scheduled_jobs():
     job()
