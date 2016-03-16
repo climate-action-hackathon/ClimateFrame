@@ -2,6 +2,85 @@
 slides & prototype
 
 ##### Ideally:
+
+* Before we start: 
+    * Who here has a cell phone with them? Please raise your arm.
+    * Alright, if it is not within reach please take it out at this point, we will be needing it. 
+    * Thank you
+* Within Zambia: 
+    * We've heard about a lot of issues during the presentations on the first day:
+        * A lot of you implemented similar systems but encountered the following issues:
+            * bridging the gap between datasets and vulnerable communities
+            * Difficulty to combine datasets and knowledge of local experts
+            * Lack of a common interface for building a message system based on customized datasets
+            * Difficulty to communicate effectively and automaticall issue warnings or inform communities
+            * Monetization and Sustainability
+                * Poor Person Pays (PPP) does not work
+            * Lack of understanding how best to reach vulnerable communities and communicate with them
+    * We wanted to address these issues
+        * ClimateFrame is a framework that allows you to frame data by defining specific actions that are executed when certain events occur within real time data.
+    * How so? Let's go through an example:
+        * Consider Nelisa. 
+            * Nelisa is a specialist working with local farmers within her community.
+            * She has had multiple in depth conversations with them and has watched them work.
+            * She has identified several ways in which she could help them in their workflow using her knowledge and a dataset.
+                * E.g. She has access to a dataset that gives her information on when the crops of the farmers need to be watered and harvested to maximize output. 
+            * However this would require her to be in contact with the farmers almost daily. 
+        * Problem: Nelisa has no way of reaching all farmers easily.    
+* Live demo:
+    * We will now look at a live demo of our platform. For this demonstration, you will assume the role of farmers. Please have your cell phones ready.
+    * Back to Nelisa
+    * Nelisa decides to use **ClimateFrame** to keep the farmers up to date with best practices.
+        * Within the platform she can select the datasets she will base her messages on.
+        * She creates rules in the format "If there is going to be no rain in the next 3 hours, send message 'water the crops' ".
+        * The platform then provides Nelisa with a number that she can distribute among the farmers. 
+            * Here is her Number which she now through this presentation distributes to you.
+            * Please send a text to this number (the content being 1, 2, or 3)
+        * Because Nelisa is aware that not all of you farmers have smart phones and that there are varying degrees of literacy amongst you, she has selected to provide the information 'water the crops' to you in 3 ways:
+            * If you texted '1':
+                * You will or have received a text message with text
+            * If you texted '2':
+                * You will or have received a text message with a symbol
+                ```
+                 ______   _
+               __|     | (*)
+              |  |     |//""
+               \ |      / ""
+                ˜|_____|  ""
+                          ""
+                (o) (o) (o)"(o) 
+                 |   |   |"" |
+                ~~~~~~~~~~~~~~~~ 
+
+                (crops)
+                ```
+
+            * If you texted '3':
+                * You will or have received a call in the local language (in this case English)
+                * or an ASCII art universal symbol.
+    * Let's think back to Nelisa 
+    * 
+    *
+    * Now please send a text message to: [NUMBER]
+
+
+
+```
+  ______
+ |
+ |______
+ |______ \
+        ) |
+       / /
+
+(o) (o) (o) (o) 
+ |   |   |   |
+ 
+(bucket of water)
+```
+
+
+
 Life demo with delegates texting the number and us sending some life info to them.
 
 
