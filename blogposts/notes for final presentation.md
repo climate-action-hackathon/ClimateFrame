@@ -42,6 +42,7 @@ slides & prototype
             * If you texted '2':
                 * You will or have received a text message with a symbol
                 ```
+                .
                  ______   _
                __|     | (*)
               |  |     |//""
