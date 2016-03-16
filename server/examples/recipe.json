@@ -1,0 +1,25 @@
+{
+    "triggers": [
+        {
+            "api_id": "pulse",
+            "trigger_id": "temp_over",
+            "parameters": [
+                {
+                    "temp": 35
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "sms",
+            "name": "Thunderstorm ASCII Art",
+            "numbers": ["+905301148060"]
+        },
+        {
+            "type": "call",
+            "name": "Thunderstorm Emergency Call",
+            "numbers": ["+905301148060"]
+        }
+    ]
+}
