@@ -12,14 +12,18 @@ def get_hourly_6day_forecast():
         response = requests.get(request_url)
         return response.json()['hourlyForecastPeriod']
 
-def filter_temperature_under(forecast_list, degree):
+def filter_temperature_under(degree):
+    forecast_list = get_hourly_6day_forecast()
     return filter(lambda x: x['temperature'] <= degree, forecast_list)
 
-def filter_temperature_over(forecast_list, degree):
+def filter_temperature_over(degree):
+    forecast_list = get_hourly_6day_forecast()
     return filter(lambda x: x['temperature'] >= degree, forecast_list)
 
-def filter_wind_speed_over(forecast_list, speed):
+def filter_wind_speed_over(speed):
+    forecast_list = get_hourly_6day_forecast()
     return filter(lambda x: x['windSpeed'] >= speed, forecast_list)
 
-def filter_thunderstorm_probability_over(forecast_list, percentage):
+def filter_thunderstorm_probability_over(percentage):
+    forecast_list = get_hourly_6day_forecast()
     return filter(lambda x: x['thunderstormProbability'] >= percentage, forecast_list)

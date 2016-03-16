@@ -1,5 +1,10 @@
+// once such a recipe is send from frontend backend is respond with recipe id
+// For example {"recipe_id": "47189023261"}
+
 {
     "name": "Thunderstorm Warning",
+    // the following filed is going to be added by mongodb after it's saved
+    "_id": "47189023261",
     "triggers": [
         {
             "api_id": "pulse",
