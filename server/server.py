@@ -11,6 +11,16 @@ app = Flask(__name__)
 database = Database()
 thread.start_new_thread(start_scheduled_jobs, ())
 
+# Dirty hack to get delete recipe endpoint working
+@app.before_request
+def before_request():
+    method = request.form.get('_method', '').upper()
+    if method:
+        request.environ['REQUEST_METHOD'] = method
+        ctx = flask._request_ctx_stack.top
+        ctx.url_adapter.default_method = method
+        assert request.method == method
+
 @app.route("/")
 def hello():
     return "ClimateFrame FTW!"
@@ -33,25 +43,15 @@ def add_recipe():
     recipe_id = database.add_recipe(recipe_json)
     return jsonify({'recipe_id': str(recipe_id)})
 
-# Trick to get delete recipe endpoint working
-@app.before_request
-def before_request():
-    method = request.form.get('_method', '').upper()
-    if method:
-        request.environ['REQUEST_METHOD'] = method
-        ctx = flask._request_ctx_stack.top
-        ctx.url_adapter.default_method = method
-        assert request.method == method
+@app.route('/recipes', methods=['DELETE'])
+def delete_all_recipes():
+   status = database.delete_all_recipes()
+   return jsonify(status)
 
-
-@app.route('/recipe/delete/<string:id>', methods=['DELETE'])
+@app.route('/recipe/<string:id>', methods=['DELETE'])
 def delete_entry(id):
    status = database.delete_recipe(str(id))
    return jsonify(status)
-
-@app.route("/number")
-def number():
-    return "number"
 
 @app.route("/textmessage")
 def textmessage():

@@ -35,9 +35,10 @@ class Database():
         recipes = self.get_cursor_data(cursor)
         return recipes
 
-    def remove_all_recipes(self):
+    def delete_all_recipes(self):
         db = self.get_db()
-        db.recipes.remove()
+        result_dict = db.recipes.remove()
+        return result_dict
 
     def get_recipe(self, id):
         db = self.get_db()
