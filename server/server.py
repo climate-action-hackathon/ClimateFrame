@@ -30,8 +30,9 @@ def get_recipes():
 def add_recipe():
     recipe_json = request.json
     recipe_id = database.add_recipe(recipe_json)
-    
-    return str(recipe_id)
+
+    return jsonify({'recipe_id':str(recipe_id)})
+    # return jsonify({'recipe_id': 'x'})
 
 if __name__ == "__main__":
     app.run(debug=True)

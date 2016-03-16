@@ -18,6 +18,8 @@ class Database():
 
     def get_cursor_data(self, cursor):
         data = []
+        if cursor.size() == 1:
+            return cursor[0]
         for item in cursor:
             data.append(item)
         return data
