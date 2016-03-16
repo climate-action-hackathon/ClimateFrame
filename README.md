@@ -69,19 +69,14 @@ pip install Flask
 ```
 
 
-
-
 TODO:
 -----
 
-BACKEND:
---------
-* Backend: 
+#### BACKEND:
 * Everyone else
 * Using Python Flask
 
-Frontend:
----------
+#### Frontend:
 * Rashiq
 
 
