@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>ClimateFrame</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="js/dashboard.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <header class="app-bar promote-layer paper-toolbar paper-shadow">
+    <div class="app-bar-container paper-toolbar">
+      <div class="icon">
+        <img src="assets/logo_white.png">
+      </div>
+      <p class="title">ClimateFrame</p>
+    </div>
+  </header>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="left-panel">
+      <table class="u-full-width">
+        <tbody>
+          <tr id="list-cell-1">
+            <td>Flood Data</td>
+          </tr>
+          <tr id="list-cell-2">
+            <td>Drought Data</td>
+          </tr>
+          <tr id="list-cell-3">
+            <td>Satellite Data</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="right-panel">
+      <div class="content">
+        <span>If</span>
+        <span class="highlight">Temperature</span> 
+        <div class="option-wrapper">
+          <table class="option-table">
+            <tbody>
+              <tr id="option-cell-1">
+                <td>less than</td>
+              </tr>
+              <tr id="option-cell-2">
+                <td>greater than</td>
+              </tr>
+              <tr id="option-cell-3">
+                <td>equals</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <input  type="email" placeholder="38°C">
+      </div>
+      <div class="content">
+        <span class="highlight">Then</span>
+        <div class="action-wrapper">
+          <table class="action-table">
+            <tbody>
+              <tr id="action-cell-1">
+                <td>send SMS</td>
+              </tr>
+              <tr id="action-cell-2">
+                <td>call</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
