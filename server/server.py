@@ -78,7 +78,7 @@ def login():
 
 @app.route('/dashboard')
 def show_dashboard():
-    with open('config.json') as data_file:
+    with open('../config.json') as data_file:
         data = json.load(data_file)
 
     # providers = map(lambda x: data['apis'][x]['name'], data['apis'])
