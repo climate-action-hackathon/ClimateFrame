@@ -1,6 +1,7 @@
 {
     "keys": {
-        "p_key": "d484f320c70e43528cd85eae0618c45a"
+        "p_key": "d484f320c70e43528cd85eae0618c45a",
+        "ubi_key": "0ae17c9399cd016022a68595adcb4322780d941f"
     },
     "apis": {
         "pulse": {
@@ -37,11 +38,136 @@
                         "name": "Percentage",
                         "unit": "percentage"
                     }
+                },
+                "precipitation_probability_greater_than": {
+                    "name": "Precipitation probability is greater than",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Percentage",
+                        "unit": "percentage"
+                    }
+                },
+                "precipitation_probability_less_than": {
+                    "name": "Precipitation probability is lower than",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Percentage",
+                        "unit": "percentage"
+                    }
                 }
             }
         },
         "aweather": {
             "name": "aWeather"
+        },
+        "ubimet": {
+            "name": "UBIMET Warnings",
+            "triggers": {
+                "is_tropical_cyclone_warning": {
+                    "name": "is_there_tropical_cyclone_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_tornado_warning": {
+                    "name": "is_there_tornado_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_blizzard_warning": {
+                    "name": "is_there_blizzard_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_monsoon_warning": {
+                    "name": "is_there_monsoon_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_snow_warning": {
+                    "name": "is_there_snow_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_freezing_warning": {
+                    "name": "is_there_freezing_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_thunderstorm_warning": {
+                    "name": "is_there_thunderstorm_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_rain_warning": {
+                    "name": "is_there_rain_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_wind_warning": {
+                    "name": "is_there_wind_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_swell_warning": {
+                    "name": "is_there_swell_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_fire_risk_warning": {
+                    "name": "is_there_fire_risk_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_uv_index_warning": {
+                    "name": "is_there_uv_index_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                },
+                "is_frost_warning": {
+                    "name": "is_there_frost_warning",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Level",
+                        "unit": "Severity of warning from 1 to 3"
+                    }
+                }
+            }
         }
     }
 }

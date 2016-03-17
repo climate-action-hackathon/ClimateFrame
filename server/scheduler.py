@@ -1,17 +1,13 @@
 from apis.trigger import control_all_recipes
-import schedule
+import threading
 import time
 from db import Database
 
 database = Database()
 
-def job():
+def start_scheduled_jobs():
+    print
+    print(time.ctime())
     recipes = database.get_all_recipes()
     control_all_recipes(recipes)
-
-def start_scheduled_jobs():
-    job()
-    schedule.every(1).minutes.do(job)
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+    threading.Timer(60, start_scheduled_jobs).start()

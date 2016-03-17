@@ -5,11 +5,11 @@
     "name": "Thunderstorm Warning",
     // the following filed is going to be added by mongodb after it's saved
     "_id": "47189023261",
-    "latitude": "-17.9244",
-    "longitude": "25.8567",
     "trigger": {
         "api_id": "pulse",
         "trigger_id": "thunder_over",
+        "latitude": "-17.9244",
+        "longitude": "25.8567",
         "parameter": 75
     },
     "action": {

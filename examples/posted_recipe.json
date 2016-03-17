@@ -1,10 +1,10 @@
 {
     "name": "Thunderstorm Warning",
-    "latitude": "-17.9244",
-    "longitude": "25.8567",
     "trigger": {
         "api_id": "pulse",
         "trigger_id": "thunder_over",
+        "latitude": "-17.9244",
+        "longitude": "25.8567",
         "parameter": 75
     },
     "action": {

@@ -6,67 +6,64 @@ from apis import pulse
 from db import Database
 from scheduler import start_scheduled_jobs
 from actions import send_sms, send_voice_message, get_records
+from apis.ubimet import get_current_warning, is_tropical_cyclone_warning
 
-app = Flask(__name__)
-database = Database()
-thread.start_new_thread(start_scheduled_jobs, ())
+latidude = '-17.9244'
+longitude = '25.8567'
 
-@app.route("/")
-def hello():
-    return "ClimateFrame FTW!"
+print get_current_warning(latidude, longitude)
+print is_tropical_cyclone_warning(latidude, longitude, 1)
 
-@app.route("/forecast")
-def get_forecast():
-    latidude = '-17.9244'
-    longitude = '25.8567'
-    forecast = pulse.get_hourly_6day_forecast(latidude, longitude)
-    return jsonify({'forecast': forecast})
+# app = Flask(__name__)
+# database = Database()
+# start_scheduled_jobs()
 
-@app.route("/recipes")
-def get_recipes():
-    recipes = database.get_all_recipes()
-    return jsonify({'recipes': recipes})
+# @app.route("/")
+# def hello():
+#     return "ClimateFrame FTW!"
 
-@app.route('/recipe', methods = ['POST'])
-def add_recipe():
-    recipe_json = request.json
-    recipe_id = database.add_recipe(recipe_json)
-    return jsonify({'recipe_id': str(recipe_id)})
+# @app.route("/forecast")
+# def get_forecast():
+#     latidude = '-17.9244'
+#     longitude = '25.8567'
+#     forecast = pulse.get_hourly_6day_forecast(latidude, longitude)
+#     return jsonify({'forecast': forecast})
 
-@app.route('/recipes', methods=['DELETE'])
-def delete_all_recipes():
-   status = database.delete_all_recipes()
-   return jsonify(status)
+# @app.route("/recipes")
+# def get_recipes():
+#     recipes = database.get_all_recipes()
+#     return jsonify({'recipes': recipes})
 
-@app.route('/recipe/<string:id>', methods=['DELETE'])
-def delete_entry(id):
-   status = database.delete_recipe(id)
-   return jsonify(status)
+# @app.route('/recipe', methods = ['POST'])
+# def add_recipe():
+#     recipe_json = request.json
+#     recipe_id = database.add_recipe(recipe_json)
+#     return jsonify({'recipe_id': str(recipe_id)})
 
-@app.route("/textmessage")
-def textmessage():
-    numbers = ["+255765299266"]
-    text = "Water your plants. There will be no rain in the next 3 hours."
-    send_sms(text, numbers)
-    return "None"
+# @app.route('/recipes', methods=['DELETE'])
+# def delete_all_recipes():
+#    status = database.delete_all_recipes()
+#    return jsonify(status)
 
-@app.route("/text")
-def text():
-    numbers = ["+255765299266"]
-    text = ".\n      _____    _\n  __|         | (*)\n |   |          |//\"\"\n  \ |           / \"\"\n     |______|  \"\"\n                   \"\"\n (o) (o) (o) \"(o)\n   |     |     |   \"\" |\n---------------------\n"
-    send_sms(text, numbers)
-    return "None"    
+# @app.route('/recipe/<string:id>', methods=['DELETE'])
+# def delete_entry(id):
+#    status = database.delete_recipe(id)
+#    return jsonify(status)
 
-@app.route("/call")
-def call():
-    numbers = ["+255765299266"]
-    voice_url="http://demo.twilio.com/docs/voice.xml"    
-    send_voice_message(voice_url, numbers)
-    return "None"    
+# @app.route("/textmessage")
+# def textmessage():
+#     numbers = ["+255765299266"]
+#     text = "Water your plants. There will be no rain in the next 3 hours."
+#     send_sms(text, numbers)
+#     return "None"
 
-@app.route("/records")
-def records():
-    return get_records()
+# @app.route("/text")
+# def text():
+#     numbers = ["+255765299266"]
+#     text = ".\n      _____    _\n  __|         | (*)\n |   |          |//\"\"\n  \ |           / \"\"\n     |______|  \"\"\n                   \"\"\n (o) (o) (o) \"(o)\n   |     |     |   \"\" |\n---------------------\n"
+#     send_sms(text, numbers)
+#     return "None"    
+
 
 @app.route('/login')
 def login():
@@ -97,3 +94,18 @@ def show_dashboard():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+# @app.route("/call")
+# def call():
+#     numbers = ["+255765299266"]
+#     voice_url="http://demo.twilio.com/docs/voice.xml"    
+#     send_voice_message(voice_url, numbers)
+#     return "None"    
+
+# @app.route("/records")
+# def records():
+#     return get_records()
+
+# if __name__ == "__main__":
+#     # app.run(debug=True)
+#     app.run()
