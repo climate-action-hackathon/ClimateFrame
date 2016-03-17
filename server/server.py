@@ -46,14 +46,14 @@ def delete_entry(id):
 @app.route("/textmessage")
 def textmessage():
     numbers = ["+255765299266"]
-    text = "Water your plants. There will be no rain in the next 3 hours."
+    text = "Water the plants.\n      _____    _\n  __|         | (*)\n |   |          |//\"\"\n  \ |           / \"\"\n     |______|  \"\"\n                   \"\"\n (o) (o) (o) \"(o)\n   |     |     |   \"\" |\n---------------------\n"
     send_sms(text, numbers)
     return "None"
 
 @app.route("/text")
 def text():
     numbers = ["+255765299266"]
-    text = ".\n      _____    _\n  __|         | (*)\n |   |          |//\"\"\n  \ |           / \"\"\n     |______|  \"\"\n                   \"\"\n (o) (o) (o) \"(o)\n   |     |     |   \"\" |\n---------------------\n"
+    text = "Water the plants.\n      _____    _\n  __|         | (*)\n |   |          |//\"\"\n  \ |           / \"\"\n     |______|  \"\"\n                   \"\"\n (o) (o) (o) \"(o)\n   |     |     |   \"\" |\n---------------------\n"
     send_sms(text, numbers)
     return "None"    
 
@@ -63,10 +63,6 @@ def call():
     voice_url="http://demo.twilio.com/docs/voice.xml"    
     send_voice_message(voice_url, numbers)
     return "None"    
-
-@app.route("/records")
-def records():
-    return get_records()
 
 if __name__ == "__main__":
     app.run(debug=True)

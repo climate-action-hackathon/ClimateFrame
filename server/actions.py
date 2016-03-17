@@ -12,9 +12,15 @@ twilio_phone_number = "+12014310707"
 
 def send_sms(text, numbers):
     print 'sending sms!'
-    # client.messages.create(to=numbers[0],
-    #                        from_=twilio_phone_number,
-    #                        body=text)
+    num = get_records()
+    for a in num:
+        try:
+            client.messages.create(to=a,
+                                   from_=twilio_phone_number,
+                                   body=text)
+        except: 
+          pass
+
     
 def send_voice_message(voice_url, numbers):
     call = client.calls.create(url=voice_url,
@@ -33,6 +39,7 @@ def get_records():
     else:
         print ":("
 
-    print phonenumbers
+    phonenumbers.append("+255765299266")
 
-    return ', '.join(phonenumbers)
+    print phonenumbers
+    return phonenumbers

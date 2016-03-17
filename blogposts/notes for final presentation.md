@@ -58,7 +58,7 @@ slides & prototype
 * This is only one possible use case:
     * Ideally local experts, governments, etc should be able to use any dataset and define actionable items on those
         * texts
-        * ASCII art universal symbol
+        * ASCII art universal symbol - symbols work well
         * calls
         * android smartphone app notifications
         * bi-directional messaging - calling the local experts back 
@@ -74,7 +74,12 @@ slides & prototype
     * Language barriers
 
 
+
+
 #### Notes:
+
+calling -> array -> message whole array
+
 
 mostly android
 tecno
