@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,700);
 html,
 body {
   height: 100%;
@@ -95,7 +95,9 @@ div.icon img {
   float: left;
   font-size: 30px;
   padding: 64px;
-  margin-left: 42px;
+  margin-left: 80px;
+  padding-top: 46px;
+
 }
 .option-wrapper {} .option-table {
   width: 250px;
@@ -436,8 +438,29 @@ svg {
 }
 
 #message{
-  height: 125px;
+  transition: visibility 0s, opacity 0.5s linear;
+
+  transition: transform 2.3s ease-out;
+  visibility: hidden;
+  height: 100px;
   background-color: #3949AB;
   color: white;
   text-align: center;
+  padding-top: 36px;
+}
+
+#message .message {
+  font-size: 40px; 
+  font-weight: 100;
+}
+
+#message .number {
+  font-size: 40px; 
+  padding-top: 12px;
+  height: 40px;
+  font-weight: 700;
+}
+
+.pull-data{
+  width: 250px;
 }
