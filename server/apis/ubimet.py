@@ -23,7 +23,6 @@ def get_current_warning(latitude, longitude):
         extreme_now_endpoint = 'https://met-api.ubimet.at:8090/pinpoint-data?sets=extreme_now'
         location = longitude + ' ' + latitude
         request_url = extreme_now_endpoint + '&coordinates=' + location
-        requests.packages.urllib3.disable_warnings()
         response = requests.get(request_url,
             verify=False,
             headers={'Authorization': 'Token 0ae17c9399cd016022a68595adcb4322780d941f'})
