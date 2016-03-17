@@ -28,3 +28,7 @@ def filter_wind_speed_over(latitude, longitude, speed):
 def filter_thunderstorm_probability_over(latitude, longitude, percentage):
     forecast_list = get_hourly_6day_forecast(latitude, longitude)
     return filter(lambda x: x['thunderstormProbability'] >= percentage, forecast_list)
+
+def thunder_over(percentage):
+    print( "Response of the function! BTW the percentage is " + str(percentage) )
+    return True

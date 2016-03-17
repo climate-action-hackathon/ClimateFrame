@@ -7,7 +7,7 @@
             "name": "Pulse",
             "triggers": {
                 "temp_over": {
-                    "name": "Temperature is over",
+                    "name": "Temperature is greater than",
                     "parameter": {
                         "type": "int",
                         "name": "Temperature",
@@ -15,7 +15,7 @@
                     }
                 },
                 "temp_under": {
-                    "name": "Temperature is under",
+                    "name": "Temperature is less than",
                     "parameter": {
                         "type": "int",
                         "name": "Temperature",
@@ -23,7 +23,7 @@
                     }
                 },
                 "wind_over": {
-                    "name": "Wind speed is over",
+                    "name": "Wind speed is greater than",
                     "parameter": {
                         "type": "int",
                         "name": "Wind Speed",
@@ -31,7 +31,7 @@
                     }
                 },
                 "thunder_over": {
-                    "name": "Thunderstorm risk is over",
+                    "name": "Thunderstorm risk is greater than",
                     "parameter": {
                         "type": "int",
                         "name": "Percentage",

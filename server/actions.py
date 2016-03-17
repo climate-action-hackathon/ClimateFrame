@@ -11,9 +11,10 @@ client = TwilioRestClient(account_sid, auth_token)
 twilio_phone_number = "+12014310707"
 
 def send_sms(text, numbers):
-    client.messages.create(to=numbers[0],
-                           from_=twilio_phone_number,
-                           body=text)
+    print 'sending sms!'
+    # client.messages.create(to=numbers[0],
+    #                        from_=twilio_phone_number,
+    #                        body=text)
     
 def send_voice_message(voice_url, numbers):
     call = client.calls.create(url=voice_url,
