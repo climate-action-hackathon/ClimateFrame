@@ -74,30 +74,23 @@
   </div>
   </div>          </div>
   <div class="container">
-   <div class="row">
-  <ul class="">
-  
-         <div class="col-md-4 visible-md visible-lg s_row ">
-    
-             <div class="row user_photo">
-                <h3> Welcome Mr. Abbas Kitogo </h3>
-         </div>
-         <div class="row user_nav" style="color:white;">
+   <div class="row">    
+      <div class="col-md-4 visible-md visible-lg s_row ">
+      
+        <div class="row user_photo">
+          <h3> Welcome Mr. Abbas Kitogo </h3>
+        </div>
+        <div class="row user_nav" style="color:white;">
 
-        <div class="list-group" style="color:white; font:120%">
-        {% for api in data['apis'] %}
-
-         <a href="/" class="list-group-item" style="background:#3C763D; color:white;     padding: 15px 20px 15px 20px;">
-                <span class="glyphicon glyphicon-tower"></span> {{data['apis'][api]['name']}} </a>
-    
-        {% endfor %}                         
-    
-    <!--<a href="forum" class="list-group-item"><span class="glyphicon glyphicon-comment"></span> Forum</a>
-    -->
-     </div>    
-      </div><!-- end of row for info -->
-
-         </div>
+          <div class="list-group" style="color:white; font:120%">
+          {% for api_id in data['api_ids'] %}
+             <a href="/" class="list-group-item" id="{{api_id}}" style="background:#3C763D; color:white;
+                 padding: 15px 20px 15px 20px;">
+                    <span class="glyphicon glyphicon-tower"></span> {{data['config']['apis'][api_id]['name']}} </a>
+          {% endfor %}
+        </div>    
+      </div>
+    </div>
    <!-- end of col-md-3 -->
    <div class="container visible-sm visible-xs s_row">
        
@@ -125,20 +118,23 @@
  
   </div><!-- end of col-md-3 -->
 
- {% for api in data['apis'] %}
- <div id=" {{data['apis'][api]['name']}}">
-  {% for trigger in api %}
- <div class="row">
-  <a href="#" class="col-md-11 col-sm-10" style="    font: 120%;
-    margin-left: 4%;
-    padding: 10px;
-    border-color: rgba(43, 107, 44, 0.25);
-    border: 2px solid;
-    border-radius:4px;
-  color: #333;"> {{(data['apis'][api])}} </a>
-</div>
-<br>
- {% endfor %}  
+ {% for api_id in data['api_ids'] %}
+ <div id=" {{api_id}}">
+  {% for trigger_id in data[api_id]['trigger_ids'] %}
+     <div class="row">
+      <a href="#" class="col-md-11 col-sm-10 {{api_id}}" style="    font: 120%;
+        margin-left: 4%;
+        padding: 10px;
+        border-color: rgba(43, 107, 44, 0.25);
+        border: 2px solid;
+        border-radius:4px;
+      color: #333;"> {{(data['config']['apis'][api_id]['triggers'][trigger_id]['name'])}}
+      {{(data['config']['apis'][api_id]['triggers'][trigger_id]['parameter']['name'])}} 
+      ( {{(data['config']['apis'][api_id]['triggers'][trigger_id]['parameter']['unit'])}} )
+      </a>
+    </div>
+    <br>
+ {% endfor %}
 </div>
     
  {% endfor %}                         
@@ -192,9 +188,6 @@
 </div>
         </div>
   
-  <div class="hide" style="display:none;">
-   
-                                            </div>
- 
+  <div class="hide" style="display:none;"></div>
 </body>
-  </html>
+</html>

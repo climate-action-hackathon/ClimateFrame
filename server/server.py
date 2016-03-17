@@ -9,8 +9,8 @@ from actions import send_sms, send_voice_message, get_records
 from apis.ubimet import get_current_warning, is_tropical_cyclone_warning
 
 app = Flask(__name__)
-database = Database()
-start_scheduled_jobs()
+# database = Database()
+# start_scheduled_jobs()
 
 @app.route("/")
 def hello():
@@ -81,20 +81,22 @@ def show_dashboard():
     with open('../config.json') as data_file:
         data = json.load(data_file)
 
-    # providers = map(lambda x: data['apis'][x]['name'], data['apis'])
-    # triggers = ""
-    # print data['apis']
-    # for provider in data['apis']:
-    #     print provider
-    #     if 'triggers' in provider:
-    #         triggers = provider.triggers
-    # print triggers
+        # api_ids = map(lambda x: data['apis'], data['apis'])
+        api_ids = data['apis'].keys()
 
-    # final_data = {}
-    # final_data['providers'] = providers
-    # final_data['triggers']  = triggers
+        x = {}
 
-    return render_template('dashboard.html', data=data)
+        x['api_ids'] = api_ids
+
+        for api_id in api_ids:
+            x[api_id] = {}
+            trigger_ids = data['apis'][api_id]['triggers'].keys()
+            x[api_id]['trigger_ids'] = trigger_ids
+
+        x['config'] = data
+        print x
+        # return jsonify(x)
+        return render_template('dashboard.html', data=x)
 
 
 if __name__ == "__main__":

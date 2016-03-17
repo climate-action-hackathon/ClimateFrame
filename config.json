@@ -58,13 +58,14 @@
             }
         },
         "aweather": {
-            "name": "aWeather"
+            "name": "aWeather",
+            "triggers": {}
         },
         "ubimet": {
             "name": "UBIMET Warnings",
             "triggers": {
                 "is_tropical_cyclone_warning": {
-                    "name": "is_there_tropical_cyclone_warning",
+                    "name": "Is there tropical cyclone warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -72,7 +73,7 @@
                     }
                 },
                 "is_tornado_warning": {
-                    "name": "is_there_tornado_warning",
+                    "name": "Is there tornado warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -80,7 +81,7 @@
                     }
                 },
                 "is_blizzard_warning": {
-                    "name": "is_there_blizzard_warning",
+                    "name": "Is there blizzard warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -88,7 +89,7 @@
                     }
                 },
                 "is_monsoon_warning": {
-                    "name": "is_there_monsoon_warning",
+                    "name": "Is there monsoon warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -96,7 +97,7 @@
                     }
                 },
                 "is_snow_warning": {
-                    "name": "is_there_snow_warning",
+                    "name": "Is there snow warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -104,7 +105,7 @@
                     }
                 },
                 "is_freezing_warning": {
-                    "name": "is_there_freezing_warning",
+                    "name": "Is there freezing warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -112,7 +113,7 @@
                     }
                 },
                 "is_thunderstorm_warning": {
-                    "name": "is_there_thunderstorm_warning",
+                    "name": "Is there thunderstorm warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -120,7 +121,7 @@
                     }
                 },
                 "is_rain_warning": {
-                    "name": "is_there_rain_warning",
+                    "name": "Is there rain warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -128,7 +129,7 @@
                     }
                 },
                 "is_wind_warning": {
-                    "name": "is_there_wind_warning",
+                    "name": "Is there wind warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -136,7 +137,7 @@
                     }
                 },
                 "is_swell_warning": {
-                    "name": "is_there_swell_warning",
+                    "name": "Is there swell warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -144,7 +145,7 @@
                     }
                 },
                 "is_fire_risk_warning": {
-                    "name": "is_there_fire_risk_warning",
+                    "name": "Is there fire risk warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -152,7 +153,7 @@
                     }
                 },
                 "is_uv_index_warning": {
-                    "name": "is_there_uv_index_warning",
+                    "name": "Is there uv index warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
@@ -160,7 +161,7 @@
                     }
                 },
                 "is_frost_warning": {
-                    "name": "is_there_frost_warning",
+                    "name": "Is there frost warning",
                     "parameter": {
                         "type": "int",
                         "name": "Level",
