@@ -9,7 +9,7 @@ from actions import send_sms, send_voice_message, get_records
 
 app = Flask(__name__)
 database = Database()
-thread.start_new_thread(start_scheduled_jobs, ())
+start_scheduled_jobs()
 
 @app.route("/")
 def hello():
@@ -69,4 +69,5 @@ def records():
     return get_records()
 
 if __name__ == "__main__":
+    # app.run(debug=True)
     app.run(debug=True)
