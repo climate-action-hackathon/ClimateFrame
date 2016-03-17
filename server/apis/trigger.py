@@ -6,7 +6,7 @@ import importlib
 def take_action(action):
 	print ('Taking action for ' + str(action))
 	if action['type'] == 'sms':
-		send_sms('', [])
+		send_sms(action['text'], action['numbers'])
 	return None
 
 def check_trigger(trigger):
