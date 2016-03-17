@@ -70,8 +70,6 @@ slides & prototype
 * Challenges:
     * Georgraphic data
     * Involving key people share that aim to help communities
-    * Monetizing or making this sustainable
-    * For key people to reach the communities
     * Finding a common and easily usable interface
     * Language barriers
 
