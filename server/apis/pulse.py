@@ -31,3 +31,13 @@ def thunderstorm_probability_greater_than(latitude, longitude, percentage):
     predictions = get_hourly_6day_forecast(latitude, longitude)
     filtered_predictions = filter(lambda x: x['thunderstormProbability'] >= percentage, predictions)
     return len(filtered_predictions) > 0
+
+def precipitation_probability_greater_than(latitude, longitude, percentage):
+    predictions = get_hourly_6day_forecast(latitude, longitude)
+    filtered_predictions = filter(lambda x: x['adjustedPrecipProbability'] >= percentage, predictions)
+    return len(filtered_predictions) > 0
+
+def precipitation_probability_less_than(latitude, longitude, percentage):
+    predictions = get_hourly_6day_forecast(latitude, longitude)
+    filtered_predictions = filter(lambda x: x['adjustedPrecipProbability'] >= percentage, predictions)
+    return not len(filtered_predictions) > 0

@@ -6,6 +6,7 @@ from db import Database
 database = Database()
 
 def start_scheduled_jobs():
+    print
     print(time.ctime())
     recipes = database.get_all_recipes()
     control_all_recipes(recipes)

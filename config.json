@@ -37,6 +37,22 @@
                         "name": "Percentage",
                         "unit": "percentage"
                     }
+                },
+                "precipitation_probability_greater_than": {
+                    "name": "Precipitation probability is greater than",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Percentage",
+                        "unit": "percentage"
+                    }
+                },
+                "precipitation_probability_less_than": {
+                    "name": "Precipitation probability is lower than",
+                    "parameter": {
+                        "type": "int",
+                        "name": "Percentage",
+                        "unit": "percentage"
+                    }
                 }
             }
         },
