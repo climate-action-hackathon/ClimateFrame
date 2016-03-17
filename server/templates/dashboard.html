@@ -36,11 +36,6 @@
    <button id="trigger" data-toggle="dropdown" class="u_n_button btn-navbar hidden-bar pull-right dropdown-toggle" type="button">
      <span class="glyphicon glyphicon-align-justify"></span>
   </button> 
-  <!--<button type="button" class="dropdown btn btn-primary btn-navbar hidden-bar pull-right" >
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-    <span class="glyphicon glyphicon-align-justify"></span>
-      </a>
-  </button>-->
         
    <a href="/" class=""><img style="width:5%; height:5%; padding-top:1%;" class="logo img col-sm-4" src="{{ url_for('static',filename='assets/logo_white.png')}}" alt="Cf logo"></a>   
   
@@ -99,7 +94,8 @@
     
     <!--<a href="forum" class="list-group-item"><span class="glyphicon glyphicon-comment"></span> Forum</a>
     -->
-     </div>     </div><!-- end of row for info -->
+     </div>    
+      </div><!-- end of row for info -->
 
          </div>
    <!-- end of col-md-3 -->
@@ -121,100 +117,37 @@
    
     </div>
  </div>
-   <!-- end of col-md-3 --><!-- 
-   <div class="col-md-6 s_row">
-       <div class="row " id="abId0.31919886032119393">
-         <div class="col-lg-12 col-md-12 " id="abId0.936026681214571">
-      <div class="input-group" id="abId0.22415756504051387" abineguid="10DC4DC9C60F4B7B8AB8A58CFB6CB75E">
-        <input type="text" id="searchIn" class="form-control searchIn" placeholder="Search for member">
-         <div id="dataPage" style="display:hidden;" data-value="userhome">
-          </div>         
-        <span class="input-group-btn">
-          <button class="btn u_s_button searchbuttonHeight" type="button">Search <span class="glyphicon glyphicon-search"></span></button>
-        </span>
-      </div><!-- /input-group -->
-    <!-- </div><!-- /.col-lg-12 -->
-    <!-- <div class="col-lg-12 searchResult" id="sResult">
-      <div class="users">
-         <ul class="nav" id="resultUl">
-         
-         </ul>
-      </div> -->
-      
-   <!--  </div>
-       </div> --> 
-       <!-- end of row for search bar -->
-       <!--<div class="row visible-sm visible-xs">
-   <div class="col-sm-12 col-xs-12 ">
-   <div class="btn-group btn-group-justified">
-         <div class="btn-group">
-     <button type="button" class="btn btn-default">Search</button>
-         </div>
-         
-    </div>     
-       </div>
-       </div>-->
        <div class="col-md-4 visible-md visible-lg new_row">
             <div class="date">
-<div class="">
-  <!--<a href="#" class="list-group-item"><h3>Recent Activities</h3></a>
-  <a href="#" class="list-group-item">Yesterday:</a>  
-  <a href="#" class="list-group-item">This Week:</a>  
-  <a href="#" class="list-group-item">Last Week:</a>-->
-   <h3> If </h3>
- </div>
- 
-         </div><!-- end of col-md-3 -->
 
-         <div class="row">
+   <h3> If </h3>
+
+ 
+  </div><!-- end of col-md-3 -->
+
+ {% for api in data['apis'] %}
+ <div id=" {{data['apis'][api]['name']}}">
+  {% for trigger in api %}
+ <div class="row">
   <a href="#" class="col-md-11 col-sm-10" style="    font: 120%;
     margin-left: 4%;
     padding: 10px;
     border-color: rgba(43, 107, 44, 0.25);
     border: 2px solid;
     border-radius:4px;
-    color: #333;"> Temperature is greater than </a>
+  color: #333;"> {{(data['apis'][api])}} </a>
 </div>
 <br>
-<div class="row">
-<a href="#" class="col-md-11 col-sm-10" style="    font: 120%;
-    margin-left: 4%;
-    padding: 10px;
-    border-radius:4px;
-    border-color: rgba(43, 107, 44, 0.25);
-    border: 2px solid;
-    color: #333;"> Wind speed is greater than </a>
+ {% endfor %}  
 </div>
-<br>
-<div class="row">
-<a href="#" class="col-md-11 col-sm-10" style="    font: 120%;
-    margin-left: 4%;
-    padding: 10px;
-    border-radius:4px;
-    border-color: rgba(43, 107, 44, 0.25);
-    border: 2px solid;
-    color: #333;"> Wind speed is greater than </a>
-</div>
-<br>
-<div class="row">
-<a href="#" class="col-md-11 col-sm-10" style="    font: 120%;
-    margin-left: 4%;
-    padding: 10px;
-    border-radius:4px;
-    border-color: rgba(43, 107, 44, 0.25);
-    border: 2px solid;
-    color: #333;"> Thunderstorm risk is greater than </a>
-</div>
+    
+ {% endfor %}                         
 
        </div>
 <div class="col-md-4 visible-md visible-lg new_row">
             <div class="date">
 <div class="">
 
-  <!--<a href="#" class="list-group-item"><h3>Recent Activities</h3></a>
-  <a href="#" class="list-group-item">Yesterday:</a>  
-  <a href="#" class="list-group-item">This Week:</a>  
-  <a href="#" class="list-group-item">Last Week:</a>-->
    <h3> Then </h3>
  </div>
 
