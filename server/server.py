@@ -81,9 +81,12 @@ def show_dashboard():
 
     providers = map(lambda x: data['apis'][x]['name'], data['apis'])
     triggers = ""
-    if 'triggers' in data['apis'].keys():
-        triggers = data['apis']['triggers']
-        print triggers
+    print data['apis']
+    for provider in data['apis']:
+        print provider
+        if 'triggers' in provider:
+            triggers = provider.triggers
+    print triggers
 
     final_data = {}
     final_data['providers'] = providers
