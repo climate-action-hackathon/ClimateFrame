@@ -13,22 +13,22 @@ def get_hourly_6day_forecast(latitude, longitude):
         response = requests.get(request_url)
         return response.json()['hourlyForecastPeriod']
 
-def filter_temperature_under(latitude, longitude, degree):
-    forecast_list = get_hourly_6day_forecast(latitude, longitude)
-    return filter(lambda x: x['temperature'] <= degree, forecast_list)
+def temperature_less_than(latitude, longitude, degree):
+    predictions = get_hourly_6day_forecast(latitude, longitude)
+    filtered_predictions filter(lambda x: x['temperature'] <= degree, forecast_list)
+    return len(greater than) > 0
 
-def filter_temperature_over(latitude, longitude, degree):
-    forecast_list = get_hourly_6day_forecast(latitude, longitude)
-    return filter(lambda x: x['temperature'] >= degree, forecast_list)
+def temperature_greater_than(latitude, longitude, degree):
+    predictions = get_hourly_6day_forecast(latitude, longitude)
+    filtered_predictions filter(lambda x: x['temperature'] >= degree, forecast_list)
+    return len(greater than) > 0
 
-def filter_wind_speed_over(latitude, longitude, speed):
-    forecast_list = get_hourly_6day_forecast(latitude, longitude)
-    return filter(lambda x: x['windSpeed'] >= speed, forecast_list)
+def wind_speed_greater_than(latitude, longitude, speed):
+    predictions = get_hourly_6day_forecast(latitude, longitude)
+    filtered_predictions filter(lambda x: x['windSpeed'] >= speed, forecast_list)
+    return len(greater than) > 0
 
-def filter_thunderstorm_probability_over(latitude, longitude, percentage):
-    forecast_list = get_hourly_6day_forecast(latitude, longitude)
-    return filter(lambda x: x['thunderstormProbability'] >= percentage, forecast_list)
-
-def thunder_over(percentage):
-    print( "Response of the function! BTW the percentage is " + str(percentage) )
-    return True
+def thunderstorm_probability_greater_than(latitude, longitude, percentage):
+    predictions = get_hourly_6day_forecast(latitude, longitude)
+    filtered_predictions filter(lambda x: x['thunderstormProbability'] >= percentage, predictions)
+    return len(greater than) > 0
