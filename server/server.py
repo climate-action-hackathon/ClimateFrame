@@ -1,7 +1,7 @@
 import requests
 import json
 import thread
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from apis import pulse
 from db import Database
 from scheduler import start_scheduled_jobs
@@ -67,6 +67,30 @@ def call():
 @app.route("/records")
 def records():
     return get_records()
+
+@app.route('/login')
+def login():
+
+    return render_template('login.html')
+
+
+@app.route('/dashboard')
+def show_dashboard():
+    with open('config.json') as data_file:
+        data = json.load(data_file)
+
+    providers = map(lambda x: data['apis'][x]['name'], data['apis'])
+    triggers = ""
+    if 'triggers' in data['apis'].keys():
+        triggers = data['apis']['triggers']
+        print triggers
+
+    final_data = {}
+    final_data['providers'] = providers
+    final_data['triggers']  = triggers
+
+    return render_template('dashboard.html', data=final_data)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

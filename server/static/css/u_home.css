@@ -1,0 +1,151 @@
+ body{
+    	margin: 0px;
+    	padding: 0px;
+    	background: #EDEDED;
+        font-family: candara, arial, calibri, sans-serif,serif,"Times New Roman";
+        font-size: 16px;
+    }
+
+    label{
+   	  display: block;
+   	  color: steelblue;
+    }
+
+    .message p{
+    	color: red;
+    	font: 16px lucida, serif, sans-serif;
+    }
+
+    section{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        background: #EDEDED;
+    }
+
+    ul{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+
+
+  @media only screen and (min-width: 751px){
+    header{
+        width: 100%;
+        height: 75px;
+        background: #000;
+        border-bottom: 10px solid steelblue;
+    }
+
+    header img{
+        margin-top: 5px;
+        margin-left: 50px;
+        width: 100px;
+        height: 60px;
+    }
+    
+    .u_content{
+       width: 80%;
+       min-width: 750px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+
+    .u_content nav{
+        width: 20%;
+        float: left;
+    }
+
+    .u_content nav li{
+        border-bottom: 1px solid steelblue;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .u_content nav a{
+        margin-left: 20px;
+    }
+
+    .u_content .u_main_content{
+        width: 60%;
+        height: 400px;
+        float: left;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid steelblue;
+       /* background: #DDD;*/
+    }
+
+    .u_content aside{
+        width: 15%;
+        min-width: 100px;
+        float: left;
+    }
+
+    .u_content aside img{
+        width: 150px;
+        height: 120px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        float: right;
+    }
+
+    .u_content aside button{
+        float: right;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0px;
+        clear: both;
+        width: 100%;
+        height: auto;
+        background: steelblue;
+        padding-top: 10px;
+    }
+
+    footer .copyright p{
+        float: right;
+        margin-right: 20px;
+        float: bottom;
+        color: #FFF;
+    }
+
+    footer .quick_links{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: auto;
+    }
+
+    footer .quick_links ul{
+        float: left;
+        width: 25%;
+        position: relative;
+        left: 20%;
+    }
+
+    footer .quick_links a{
+        color: #FFF;
+    }
+
+    footer img{
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin-left: 10px;
+    }
+
+  }

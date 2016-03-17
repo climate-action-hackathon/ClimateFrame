@@ -9,19 +9,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1
   user-scalable=no">
-  <script type="text/javascript" src="js/jquery_min.js"></script>
-   <script type="text/javascript" src="js/jquery_min.js"></script> 
-   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-   <link rel="stylesheet" type="text/css" href="css/style.css">
-   <link rel="stylesheet" type="text/css" href="css/main.css">
-   <link rel="stylesheet" type="text/css" href="css/font.css">
-   <link rel="stylesheet" type="text/css" href="css/fontastic.css">
-   <link rel="stylesheet" type="text/css" href="css/fontasticSupport.css">
-   <script type="text/javascript" src="js/bootstrap.js"></script>
-   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="js/mainscript.js"></script>
-   <script type="text/javascript" src="js/userV0-1.js"></script>   
+  <script type="text/javascript" src="{{ url_for('static',filename='js/jquery_min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery_min.js') }}"></script>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/font.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fontastic.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fontasticSupport.css')}}">
+   <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.js')}}"></script>
+   <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+   <script type="text/javascript" src="{{ url_for('static',filename='js/mainscript.js')}}"></script>
+   <script type="text/javascript" src="{{ url_for('static',filename='js/userV0-1'.js)}}"></script>   
       
       
 </head>
@@ -42,7 +42,7 @@
       </a>
   </button>-->
         
-   <a href="/" class=""><img style="width:5%; height:5%; padding-top:1%;" class="logo img col-sm-4" src="assets/logo_white.png" alt="Cf logo"></a>   
+   <a href="/" class=""><img style="width:5%; height:5%; padding-top:1%;" class="logo img col-sm-4" src="{{ url_for('static',filename='assets/logo_white.png')}}" alt="Cf logo"></a>   
   
    
   <nav class="coll navbar-collapse" role="navigation">
@@ -80,6 +80,21 @@
   </div>          </div>
   <div class="container">
    <div class="row">
+  <ul class="">
+  
+  {% for name in data['providers'] %}
+  <li> <h2> {{name}} </h2> 
+  </li>
+  {% endfor %}
+  </ul>
+
+  <ul class="">
+  
+  {% for trigger in data['triggers'] %}
+  <li> <h2> {% print(temp) %} </h2> 
+  </li>
+  {% endfor %}
+  </ul>
 
          <div class="col-md-4 visible-md visible-lg s_row ">
     
@@ -88,16 +103,16 @@
          </div>
          <div class="row user_nav" style="color:white;">
                    <div class="list-group" style="color:white; font:120%">
-           <a href="/" class="list-group-item" style="background:#416B96; color:white;     padding: 15px 20px 15px 20px;">
-                <span class="glyphicon glyphicon-home"></span> Pulse</a>
+           <a href="/" class="list-group-item" style="background:#3C763D; color:white;     padding: 15px 20px 15px 20px;">
+                <span class="glyphicon glyphicon-tower"></span> Pulse</a>
     
         <a href="/" class="list-group-item " style="color:#333; padding: 15px 20px 15px 20px;">
-                       <span class="glyphicon glyphicon-folder-open"></span> Ubimet</a> 
+                       <span class="glyphicon glyphicon-export"></span> Ubimet</a> 
         <a href="/" class="list-group-item " style="color:#333;  padding: 15px 20px 15px 20px;">
-                    <span class="glyphicon glyphicon-calendar"></span> Aweather </a>
+                    <span class="glyphicon glyphicon-flash"></span> Aweather </a>
                     
         <a href="/" class="list-group-item " style="color:#333; padding: 15px 20px 15px 20px;">
-                    <span class="icon fr-torsos-all"></span> Earth Network</a>                                            
+                    <span class="glyphicon glyphicon-tree-deciduous"></span> Earth Network</a>                                            
     
     <!--<a href="forum" class="list-group-item"><span class="glyphicon glyphicon-comment"></span> Forum</a>
     -->
@@ -168,18 +183,47 @@
  
          </div><!-- end of col-md-3 -->
 
+         <div class="row">
+  <a href="#" class="u_button col-md-11 col-sm-10" style="font:120%;margin-left:4%; padding:10px; background-color:#3C763D"> Temperature is greater than </a>
+</div>
+<br>
+<div class="row">
+<a href="#" class="u_button col-md-11 col-sm-10" style="font:120%; margin-left:4%;padding:10px;"> Wind speed is greater than </a>
+</div>
+<br>
+<div class="row">
+<a href="#" class="u_button col-md-11 col-sm-10" style="font:120%; margin-left:4%;padding:10px;"> Wind speed is greater than </a>
+</div>
+<br>
+<div class="row">
+<a href="#" class="u_button col-md-11 col-sm-10" style="font:120%; margin-left:4%;padding:10px;"> Thunderstorm risk is greater than </a>
+</div>
+
        </div>
 <div class="col-md-4 visible-md visible-lg new_row">
             <div class="date">
 <div class="">
+
   <!--<a href="#" class="list-group-item"><h3>Recent Activities</h3></a>
   <a href="#" class="list-group-item">Yesterday:</a>  
   <a href="#" class="list-group-item">This Week:</a>  
   <a href="#" class="list-group-item">Last Week:</a>-->
    <h3> Then </h3>
  </div>
+
  
-         </div><!-- end of col-md-3 -->
+         </div>
+
+ 
+<div class="">
+<div class="row">
+  <a href="/text" class="u_button col-md-11 col-sm-10" style="font:120%;margin-left:4%; padding:10px; background-color:#3C763D"> Send Message </a>
+</div>
+<br>
+<div class="row">
+<a href="/call" class="u_button col-md-11 col-sm-10" style="font:120%; margin-left:4%;padding:10px;"> Call </a>
+</div>
+</div><!-- end of col-md-3 -->
 
        </div><!-- end u_main_content -->
 

@@ -1,0 +1,14 @@
+/* for google fonts*/
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tangerine'), url(../fonts/Tangerine/Tangerine_Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: "Gafata";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Gafata"), local("Gafata-Regular"), url("../fonts/Gafata/Gafata-Regular.woff") format("woff");
+}
