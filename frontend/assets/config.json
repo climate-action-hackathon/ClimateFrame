@@ -1,0 +1,59 @@
+{
+    "p_key":"d484f320c70e43528cd85eae0618c45a",
+    "apis": [
+        {
+            "api_id": "pulse",
+            "name": "Pulse",
+            "triggers": [
+                {
+                    "trigger_id": "temp_over",
+                    "name": "Temperature is over",
+                    "parameters": [
+                        {
+                            "parameter_id": "temp",
+                            "name": "Temperature",
+                            "unit": "celcius"
+                        }
+                    ]
+                },
+                {
+                    "trigger_id": "temp_under",
+                    "name": "Temperature is under",
+                    "parameters": [
+                        {
+                            "parameter_id": "temp",
+                            "name": "Temperature",
+                            "unit": "celcius"
+                        }
+                    ]
+                },
+                {
+                    "trigger_id": "wind_over",
+                    "name": "Wind speed is over",
+                    "parameters": [
+                        {
+                            "parameter_id": "speed",
+                            "name": "Wind Speed",
+                            "unit": "km/h"
+                        }
+                    ]
+                },
+                {
+                    "trigger_id": "thunder_over",
+                    "name": "Thunderstorm risk is over",
+                    "parameters": [
+                        {
+                            "parameter_id": "percent",
+                            "name": "Percentage",
+                            "unit": "percentage"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "api_id": "aweather",
+            "name": "aWeather"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "dataset": "Temperature",
+        "placeholder": "38°C"
+    },
+    {
+        "dataset": "Wind speed",
+        "placeholder": "100 km/h"
+    },
+    {
+        "dataset": "Thunder risk",
+        "placeholder": "45 %"
+    }
+]

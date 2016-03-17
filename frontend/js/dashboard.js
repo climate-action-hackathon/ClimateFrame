@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+  handleFab();
+
   initLists();
 
   $("[id^=list-cell]").on("click", function(){
@@ -12,7 +15,52 @@ $(document).ready(function(){
   $("[id^=action-cell]").on("click", function(){
     handleActionClick($(this));
   });
+
+  $(".generate-button").on("click", function(){
+    $(".loader").css('visibility', 'visible');
+    setTimeout(
+      function() {
+        $(".loader").css('visibility', 'hidden');
+      }, 3000);
+  });
+  
 });
+
+function handleFab(){
+
+  var fab = $(".fab");
+  var content = $(".cntt-wrapper");
+  var submit = $("#submit");
+  var cancel = $("#cancel");
+  var protect = $(".protect");
+  var fabIcon = $("svg");
+
+  $("#submit").on('click', function() {
+    $(".fab").removeClass('active');
+    $("svg").css('display', 'block');
+    $(".cntt-wrapper").css('display', 'none');
+    $(".protect").css('background', 'none');
+  });
+
+  //fab click
+  fab.on('click', function(event) {
+   event.preventDefault();
+   protect.css("background", "hsla(0, 100%, 0%, 0.3)");
+   fabIcon.css("display", "none");
+   fab.addClass('active');
+   content.css('display', 'block');
+ });
+
+  //Hide if click outside the fab
+  $(document).mouseup(function(e) {
+    if (!fab.is(e.target) && fab.has(e.target).length === 0) {
+      fab.removeClass('active');
+      fabIcon.css('display', 'block');
+      content.css('display', 'none');
+      protect.css('background', 'none');
+    }
+  });
+}
 
 function initLists(){
   $("[id^=list-cell]").each(function(){
@@ -26,6 +74,12 @@ function initLists(){
   $("[id^=action-cell]").each(function(){
     $(this).css("background-color", "#283593")
   });
+
+  renderDataTemplates();
+}
+
+function renderDataTemplates(){
+
 }
 
 function handleClick(listCell, id, clickColor, hoverColor){
@@ -47,6 +101,31 @@ function handleClick(listCell, id, clickColor, hoverColor){
 
 function handleListClick(listCell){
   handleClick(listCell, "[id^=list-cell]", "#fafafa", "white");
+  var id = getSelectedListId(listCell);
+  $("#sms").css('visibility', 'hidden');
+  switch(id){
+
+    case 1:
+    $(".option_h").text("Temperature");
+    $(".unit").text("°C");
+    break;
+
+    case 2:
+    $(".option_h").text("Wind speed");
+    $(".unit").text("km/h");
+    break;
+
+    case 3:
+    $(".option_h").text("Thunder risk");
+    $(".unit").text("%");
+    break;
+
+    case 4:
+    $(".option_h").text("Rain Probability");
+    $(".unit").text("%");
+    $("#sms").css('visibility', 'visible');
+    break;
+  }
 }
 
 function handleOptionClick(listCell){

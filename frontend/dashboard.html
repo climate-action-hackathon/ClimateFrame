@@ -29,21 +29,31 @@
       <table class="u-full-width">
         <tbody>
           <tr id="list-cell-1">
-            <td>Flood Data</td>
+            <td>Temperature</td>
           </tr>
           <tr id="list-cell-2">
-            <td>Drought Data</td>
+            <td>Wind speed</td>
           </tr>
           <tr id="list-cell-3">
-            <td>Satellite Data</td>
+            <td>Thunder risk</td>
+          </tr>
+          <tr id="list-cell-4">
+            <td>Rain Probability</td>
           </tr>
         </tbody>
       </table>
+      <div class="loader" id="#loading">Loading...</div>
+      <a class="button generate-button" id="#generate" href="#">Generate Recipe</a>
     </div>
     <div class="right-panel">
+    <div id="message">
+      <span>Message</span>
+      <br/>
+      <span>+12014310707</span>
+    </div>
       <div class="content">
         <span>If</span>
-        <span class="highlight">Temperature</span> 
+        <span class="highlight option_h">Temperature</span> 
         <div class="option-wrapper">
           <table class="option-table">
             <tbody>
@@ -59,7 +69,8 @@
             </tbody>
           </table>
         </div>
-        <input  type="email" placeholder="38°C">
+        <input id="#placeholder_" placeholder="38">
+        <span class="unit">°C</span>
       </div>
       <div class="content">
         <span class="highlight">Then</span>
@@ -74,6 +85,32 @@
               </tr>
             </tbody>
           </table>
+          <input id="sms" placeholder="Water the plants.">
+        </div>
+      </div>
+    </div>
+    <div class="protect">
+      <div class="fab">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px" height="24px" viewBox="-129 130.5 24 24">
+          <path d="M-112 2.2v-13h10 V148.5z M-118 144.9h2v-3h3v-2h-3v-3h-2v3h-3v2h3V144.9z" />
+        </svg>
+        <div class='cntt-wrapper'>
+          <div id="fab-hdr">
+            <h1>Create new data set</h1>
+          </div>
+          <div class="url-form">
+            <span>Add new Data Set Hook</span>
+            <br/>
+            <input placeholder="Name of Data Set" id="dataset-url"></input>
+            <input placeholder="https://example.com/stream" id="dataset-url"></input>
+          </div>
+
+          <form class="material-form" ng-controller="UserLogin" style="">
+          </form>
+          <div class="btn-wrapper">
+            <a href="#"type="button" class="btn" id="submit">Add</a>
+            <a href="#" class="btn" id="cancel" style="color:black">Cancel</a>
+          </div>
         </div>
       </div>
     </div>
