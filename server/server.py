@@ -1,7 +1,7 @@
 import requests
 import json
 import thread
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from apis import pulse
 from db import Database
 from scheduler import start_scheduled_jobs
@@ -69,6 +69,49 @@ def call():
 def records():
     return get_records()
 
+
+@app.route('/login')
+def login():
+
+    return render_template('login.html')
+
+
+@app.route('/dashboard')
+def show_dashboard():
+    with open('config.json') as data_file:
+        data = json.load(data_file)
+
+    providers = map(lambda x: data['apis'][x]['name'], data['apis'])
+    triggers = ""
+    print data['apis']
+    for provider in data['apis']:
+        print provider
+        if 'triggers' in provider:
+            triggers = provider.triggers
+    print triggers
+
+    final_data = {}
+    final_data['providers'] = providers
+    final_data['triggers']  = triggers
+
+    return render_template('dashboard.html', data=final_data)
+
+
 if __name__ == "__main__":
-    # app.run(debug=True)
-    app.run()
+    app.run(debug=True)
+
+# @app.route("/call")
+# def call():
+#     numbers = ["+255765299266"]
+#     voice_url="http://demo.twilio.com/docs/voice.xml"    
+#     send_voice_message(voice_url, numbers)
+#     return "None"    
+
+# @app.route("/records")
+# def records():
+#     return get_records()
+
+# if __name__ == "__main__":
+#     # app.run(debug=True)
+#     app.run()
+>>>>>>> 354a99dbb09a8b30ab8568297ca2c684850f1200
