@@ -82,37 +82,20 @@
    <div class="row">
   <ul class="">
   
-  {% for name in data['apis'] %}
-  <li> <h2> {{name}} </h2> 
-  </li>
-  {% endfor %}
-  </ul>
-
-  <ul class="">
-  
-  {% for trigger in data['apis']%}
-  <li> <h2> {% temp['triggers'] %} </h2> 
-  </li>
-  {% endfor %}
-  </ul>
-
          <div class="col-md-4 visible-md visible-lg s_row ">
     
              <div class="row user_photo">
                 <h3> Welcome Mr. Abbas Kitogo </h3>
          </div>
          <div class="row user_nav" style="color:white;">
-                   <div class="list-group" style="color:white; font:120%">
-           <a href="/" class="list-group-item" style="background:#3C763D; color:white;     padding: 15px 20px 15px 20px;">
-                <span class="glyphicon glyphicon-tower"></span> Pulse</a>
+
+        <div class="list-group" style="color:white; font:120%">
+        {% for api in data['apis'] %}
+
+         <a href="/" class="list-group-item" style="background:#3C763D; color:white;     padding: 15px 20px 15px 20px;">
+                <span class="glyphicon glyphicon-tower"></span> {{data['apis'][api]['name']}} </a>
     
-        <a href="/" class="list-group-item " style="color:#333; padding: 15px 20px 15px 20px;">
-                       <span class="glyphicon glyphicon-export"></span> Ubimet</a> 
-        <a href="/" class="list-group-item " style="color:#333;  padding: 15px 20px 15px 20px;">
-                    <span class="glyphicon glyphicon-flash"></span> Aweather </a>
-                    
-        <a href="/" class="list-group-item " style="color:#333; padding: 15px 20px 15px 20px;">
-                    <span class="glyphicon glyphicon-tree-deciduous"></span> Earth Network</a>                                            
+        {% endfor %}                         
     
     <!--<a href="forum" class="list-group-item"><span class="glyphicon glyphicon-comment"></span> Forum</a>
     -->
