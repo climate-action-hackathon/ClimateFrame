@@ -33,14 +33,15 @@ def add_recipe():
     recipe_id = database.add_recipe(recipe_json)
     return jsonify({'recipe_id': str(recipe_id)})
 
-@app.route('/recipe/delete/<string:id>', methods=['DELETE'])
-def delete_entry(id):
-   status = database.delete_recipe(str(id))
+@app.route('/recipes', methods=['DELETE'])
+def delete_all_recipes():
+   status = database.delete_all_recipes()
    return jsonify(status)
 
-@app.route("/number")
-def number():
-    return "number"
+@app.route('/recipe/<string:id>', methods=['DELETE'])
+def delete_entry(id):
+   status = database.delete_recipe(id)
+   return jsonify(status)
 
 @app.route("/textmessage")
 def textmessage():
