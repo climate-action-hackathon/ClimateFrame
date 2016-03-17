@@ -1,6 +1,7 @@
 {
     "keys": {
-        "p_key": "d484f320c70e43528cd85eae0618c45a"
+        "p_key": "d484f320c70e43528cd85eae0618c45a",
+        "ubi_key": "0ae17c9399cd016022a68595adcb4322780d941f"
     },
     "apis": {
         "pulse": {
