@@ -18,7 +18,7 @@ warnings_dict = {
 }
 
 def get_current_warning(latitude, longitude):
-    with open('../config.json') as config_file:
+    with open('config.json') as config_file:
         key = json.load(config_file)['keys']['p_key']
         extreme_now_endpoint = 'https://met-api.ubimet.at:8090/pinpoint-data?sets=extreme_now'
         location = longitude + ' ' + latitude

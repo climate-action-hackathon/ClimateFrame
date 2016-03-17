@@ -76,20 +76,20 @@ def show_dashboard():
     with open('config.json') as data_file:
         data = json.load(data_file)
 
-    providers = map(lambda x: data['apis'][x]['name'], data['apis'])
-    triggers = ""
-    print data['apis']
-    for provider in data['apis']:
-        print provider
-        if 'triggers' in provider:
-            triggers = provider.triggers
-    print triggers
+    # providers = map(lambda x: data['apis'][x]['name'], data['apis'])
+    # triggers = ""
+    # print data['apis']
+    # for provider in data['apis']:
+    #     print provider
+    #     if 'triggers' in provider:
+    #         triggers = provider.triggers
+    # print triggers
 
-    final_data = {}
-    final_data['providers'] = providers
-    final_data['triggers']  = triggers
+    # final_data = {}
+    # final_data['providers'] = providers
+    # final_data['triggers']  = triggers
 
-    return render_template('dashboard.html', data=final_data)
+    return render_template('dashboard.html', data=data)
 
 
 if __name__ == "__main__":

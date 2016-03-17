@@ -82,7 +82,7 @@
    <div class="row">
   <ul class="">
   
-  {% for name in data['providers'] %}
+  {% for name in data['apis'] %}
   <li> <h2> {{name}} </h2> 
   </li>
   {% endfor %}
@@ -90,8 +90,8 @@
 
   <ul class="">
   
-  {% for trigger in data['triggers'] %}
-  <li> <h2> {% print(temp) %} </h2> 
+  {% for trigger in data['apis']%}
+  <li> <h2> {% temp['triggers'] %} </h2> 
   </li>
   {% endfor %}
   </ul>
