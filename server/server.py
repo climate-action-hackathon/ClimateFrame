@@ -48,14 +48,14 @@ def textmessage():
     numbers = ["+255765299266"]
     text = "Water the plants.\n      _____    _\n  __|         | (*)\n |   |          |//\"\"\n  \ |           / \"\"\n     |______|  \"\"\n                   \"\"\n (o) (o) (o) \"(o)\n   |     |     |   \"\" |\n---------------------\n"
     send_sms(text, numbers)
-    return "None"
+    return "Text messages have been sent"
 
 @app.route("/text")
 def text():
     numbers = ["+255765299266"]
     text = "Water the plants.\n      _____    _\n  __|         | (*)\n |   |          |//\"\"\n  \ |           / \"\"\n     |______|  \"\"\n                   \"\"\n (o) (o) (o) \"(o)\n   |     |     |   \"\" |\n---------------------\n"
     send_sms(text, numbers)
-    return "None"    
+    return "Text messages have been sent"
 
 @app.route("/call")
 def call():
