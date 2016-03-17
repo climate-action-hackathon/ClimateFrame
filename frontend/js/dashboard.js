@@ -22,6 +22,7 @@ $(document).ready(function(){
       function() {
         $(".loader").css('visibility', 'hidden');
         $("#message").css('visibility', 'visible');
+        $(".pull-data").css('visibility', 'visible');
       }, 3000);
   });
   
@@ -105,6 +106,7 @@ function handleListClick(listCell){
   var id = getSelectedListId(listCell);
   $("#sms").css('visibility', 'hidden');
   $("#message").css('visibility', 'hidden');
+  $(".pull-data").css('visibility', 'hidden');
   switch(id){
 
     case 1:

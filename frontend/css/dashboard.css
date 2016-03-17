@@ -103,11 +103,13 @@ div.icon img {
   width: 250px;
   height: 300px;
   padding-top: 42px;
+  font-weight: 100;
 }
 .action-table {
   width: 250px;
   height: 214px;
   padding-top: 42px;
+  font-weight: 100;
 }
 th,
 td {
@@ -124,6 +126,7 @@ input {
   font-size: 19px;
   height: 44px;
   text-align: center;
+  font-weight: 100;
 }
 tr[id^="option-cell"]:hover td {
   background-color: #5C6BC0 !important;
@@ -463,4 +466,5 @@ svg {
 
 .pull-data{
   width: 250px;
+  visibility: hidden;
 }
