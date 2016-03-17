@@ -15,20 +15,20 @@ def get_hourly_6day_forecast(latitude, longitude):
 
 def temperature_less_than(latitude, longitude, degree):
     predictions = get_hourly_6day_forecast(latitude, longitude)
-    filtered_predictions filter(lambda x: x['temperature'] <= degree, forecast_list)
-    return len(greater than) > 0
+    filtered_predictions = filter(lambda x: x['temperature'] <= degree, forecast_list)
+    return len(filtered_predictions) > 0
 
 def temperature_greater_than(latitude, longitude, degree):
     predictions = get_hourly_6day_forecast(latitude, longitude)
-    filtered_predictions filter(lambda x: x['temperature'] >= degree, forecast_list)
-    return len(greater than) > 0
+    filtered_predictions = filter(lambda x: x['temperature'] >= degree, forecast_list)
+    return len(filtered_predictions) > 0
 
 def wind_speed_greater_than(latitude, longitude, speed):
     predictions = get_hourly_6day_forecast(latitude, longitude)
-    filtered_predictions filter(lambda x: x['windSpeed'] >= speed, forecast_list)
-    return len(greater than) > 0
+    filtered_predictions = filter(lambda x: x['windSpeed'] >= speed, forecast_list)
+    return len(filtered_predictions) > 0
 
 def thunderstorm_probability_greater_than(latitude, longitude, percentage):
     predictions = get_hourly_6day_forecast(latitude, longitude)
-    filtered_predictions filter(lambda x: x['thunderstormProbability'] >= percentage, predictions)
-    return len(greater than) > 0
+    filtered_predictions = filter(lambda x: x['thunderstormProbability'] >= percentage, predictions)
+    return len(filtered_predictions) > 0
